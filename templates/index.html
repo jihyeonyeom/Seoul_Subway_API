@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Seoul City</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename ='css/main.css') }}" />
+		<noscript><link rel="stylesheet" href="{{ url_for('static', filename ='css/noscript.css') }}" /></noscript>
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="index.html" id="logo">SEOUL</a></h1>
+								<hr style="border-bottom-color: rgba(255, 255, 255); box-shadow: inset 0 1px 0 0 rgba(255, 255, 255);"/>
+								<p><strong style="color: white;">서울 관광지 및 지하철 정보</strong></p>
+							</header>
+							<footer>
+								<a href="#banner" class="button circled scrolly">Info</a>
+							</footer>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#">메인</a></li>
+								<li><a href="http://127.0.0.1:5000/subway/view">노선 이미지</a></li>
+								<li><a href="http://127.0.0.1:5000/route/realtime">실시간 지하철 위치</a></li>
+								<li><a href="http://127.0.0.1:5000/subway/arrive">지하철 도착 정보</a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+			<!-- Banner -->
+				<section id="banner">
+					<header>
+						<h2><strong>서울 관광지</strong></h2>
+					</header>
+				</section>
+
+			<!-- Carousel -->
+				<section class="carousel">
+					<div class="reel">
+
+						<article>
+							<a href="#" class="image featured"><img src="../static/images/gyeongbokgung.jpg" alt="" width="336" height="223" /></a>
+							<header>
+								<h3><a href="#">광화문</a></h3>
+							</header>
+							<p>서울특별시 종로구의 조선왕조<br>법궁인 경복궁의 남쪽에 있는 정문</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="../static/images/seoul-tower.jpg" alt="" width="336" height="223" /></a>
+							<header>
+								<h3><a href="#">서울타워</a></h3>
+							</header>
+							<p>서울을 대표하는 랜드마크 탑<br>방송용 송신탑 겸 전망탑</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="../static/images/dong.jpg" alt="" width="336" height="223" /></a>
+							<header>
+								<h3><a href="#">동대문</a></h3>
+							</header>
+							<p>동대문의 전시장 및 쇼핑몰<br>최대 규모의 3차원 비정형 건축물</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="../static/images/gangnam.jpg" alt="" width="336" height="223" /></a>
+							<header>
+								<h3><a href="#">강남</a></h3>
+							</header>
+							<p>서울의 주요 번화가 중 하나인 최신 유행에 대한 모든 것</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="../static/images/hong.jpg" alt="" width="336" height="223" /></a>
+							<header>
+								<h3><a href="#">홍대</a></h3>
+							</header>
+							<p>캠퍼스의 낭만을 간직한 카페<br>예술의 거리</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="../static/images/itaewon.jpg" alt="" width="336" height="223" /></a>
+							<header>
+								<h3><a href="#">이태원</a></h3>
+							</header>
+							<p>여러 나라의 문화가 어우러져 있는<br>이태원 거리</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="../static/images/jamsil.jpg" alt="" width="336" height="223" /></a>
+							<header>
+								<h3><a href="#">잠실</a></h3>
+							</header>
+							<p>서울의 주요 명소이자 놀라움으로<br>가득한 서울의 녹색 쉼터</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="../static/images/yeouido.jpg" alt="" width="336" height="223" /></a>
+							<header>
+								<h3><a href="#">여의도</a></h3>
+							</header>
+							<p>한강에 위치한 섬<br>한강을 마주한 서울 속의 글로벌 특구</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="../static/images/gyeongbokgung.jpg" alt="" width="336" height="223" /></a>
+							<header>
+								<h3><a href="#">광화문</a></h3>
+							</header>
+							<p>서울특별시 종로구의 조선왕조<br>법궁인 경복궁의 남쪽에 있는 정문</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="../static/images/seoul-tower.jpg" alt="" width="336" height="223" /></a>
+							<header>
+								<h3><a href="#">서울타워</a></h3>
+							</header>
+							<p>서울을 대표하는 랜드마크 탑<br>방송용 송신탑 겸 전망탑</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="../static/images/dong.jpg" alt="" width="336" height="223" /></a>
+							<header>
+								<h3><a href="#">동대문</a></h3>
+							</header>
+							<p>동대문의 전시장 및 쇼핑몰<br>최대 규모의 3차원 비정형 건축물</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="../static/images/gangnam.jpg" alt="" width="336" height="223" /></a>
+							<header>
+								<h3><a href="#">강남</a></h3>
+							</header>
+							<p>서울의 주요 번화가 중 하나인 최신 유행에 대한 모든 것</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="../static/images/hong.jpg" alt="" width="336" height="223" /></a>
+							<header>
+								<h3><a href="#">홍대</a></h3>
+							</header>
+							<p>캠퍼스의 낭만을 간직한 카페<br>예술의 거리</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="../static/images/itaewon.jpg" alt="" width="336" height="223" /></a>
+							<header>
+								<h3><a href="#">이태원</a></h3>
+							</header>
+							<p>여러 나라의 문화가 어우러져 있는<br>이태원 거리</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="../static/images/jamsil.jpg" alt="" width="336" height="223" /></a>
+							<header>
+								<h3><a href="#">잠실</a></h3>
+							</header>
+							<p>서울의 주요 명소이자 놀라움으로<br>가득한 서울의 녹색 쉼터</p>
+						</article>
+
+						<article>
+							<a href="#" class="image featured"><img src="../static/images/yeouido.jpg" alt="" width="336" height="223" /></a>
+							<header>
+								<h3><a href="#">여의도</a></h3>
+							</header>
+							<p>한강에 위치한 섬<br>한강을 마주한 서울 속의 글로벌 특구</p>
+						</article>
+					</div>
+				</section>
+		</div>
+
+		<!-- Scripts -->
+        <script src="../static/js/jquery.min.js"></script>
+        <script src="../static/js/jquery.dropotron.min.js"></script>
+        <script src="../static/js/jquery.scrolly.min.js"></script>
+        <script src="../static/js/jquery.scrollex.min.js"></script>
+        <script src="../static/js/browser.min.js"></script>
+        <script src="../static/js/breakpoints.min.js"></script>
+        <script src="../static/js/util.js"></script>
+        <script src="../static/js/main.js"></script>
+
+	</body>
+</html>

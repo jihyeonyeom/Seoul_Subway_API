@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Seoul City Subway</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename ='css/main.css') }}" />
+		<noscript><link rel="stylesheet" href="{{ url_for('static', filename ='css/noscript.css') }}" /></noscript>
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="index.html" id="logo">실시간 지하철 도착 정보</a></h1>
+							</header>
+						</div>
+
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="/">메인</a></li>
+							<li><a href="http://127.0.0.1:5000/subway/view">노선 이미지</a></li>
+							<li><a href="http://127.0.0.1:5000/route/realtime">실시간 지하철 위치</a></li>
+							<li><a href="#">지하철 도착 정보</a></li>
+						</ul>
+					</nav>
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style1">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-9 col-12-mobile" id="content">
+								<article id="main">
+									<header>
+										<h3><a>실시간 검색 정보</a></h3>
+									</header>
+									<section>
+										<table>
+											<thead>
+												<tr>
+												<th>열차번호</th>
+												<th>열차종류</th>
+												<th>도착메세지</th>
+												<th>상하행구분</th>
+												<th>열차상태</th>
+												</tr>
+											</thead>
+											<tbody>
+												{% if items %}
+													{% for item in items %}
+													<tr>
+														<td>{{ item["btrainNo"] }}</td>
+														<td>{{ item["btrainSttus"] }}</td>
+														<td>{{ item["arvlMsg2"] }}</td>
+														<td>{{ item["updnLine"] }}</td>
+														{% if item["arvlCd"] == '0' %}
+														<td>진입</td>
+														{% elif item["arvlCd"] == '1' %}
+														<td>도착</td>
+														{% elif item["arvlCd"] == '2' %}
+														<td>출발</td>
+														{% elif item["arvlCd"] == '3' %}
+														<td>전역출발</td>
+														{% elif item["arvlCd"] == '4' %}
+														<td>전역진입</td>
+														{% elif item["arvlCd"] == '5' %}
+														<td>전역도착</td>
+														{% else %}
+														<td>운행중</td>
+														{% endif %}
+													</tr>
+													{% endfor %}
+												{% else %}
+													{% for i in range(10) %}
+													<tr>
+														<td>빈 항목</td>
+														<td></td>
+														<td></td>
+														<td></td>
+														<td></td>
+													</tr>
+													{% endfor %}
+												{% endif %}
+											</tbody>
+										</table>
+									</section>
+									<section>
+										{% if item_count %}
+										<p style="font-size: 20px"><b>&lt;&nbsp;&nbsp;
+											{% for i in range(1, item_count + 1) %}
+												{% if page == i %}
+												<a href="?page={{i}}" style="border-bottom: 0; color: red">{{ i }}&nbsp;&nbsp;</a>
+												{% else %}
+												<a href="?page={{i}}" style="border-bottom: 0;">{{ i }}&nbsp;&nbsp;</a>
+												{% endif %}
+											{% endfor %}
+											&gt;
+										</b></p>
+										{% endif %}
+									</section>
+								</article>
+							</div>
+							<div class="col-3 col-12-mobile" id="sidebar">
+								<section>
+									<header>
+										<h3><a>지하철 역명 검색</a></h3>
+									</header>
+									<form style="padding: 20% 0 10% 0;" class="container" action="http://127.0.0.1:5000/subway/arrive/action?page=1" method="post">
+										<div class="form-group">
+											<input type="text" class="form-control" placeholder="광운대, 동대문 등" name="station_name"/>
+											<input type="text" class="form-control" placeholder="상행, 하행, 내선, 외선" name="updn_Line" style="margin-top: 10px"/>
+										</div>
+										<footer>
+											<button type="submit" class="btn btn-primary" style="padding: 10% 20%">Search</button>
+										</footer>
+									</form>
+									<footer>
+										<p><b>Seoul Subway Information</b></p>
+										<p>Searchs for subway station name and prints information</p>
+									</footer>
+								</section>
+							</div>
+						</div>
+					</div>
+
+				</div>
+		</div>
+
+		<!-- Scripts -->
+			<script src="../static/js/jquery.min.js"></script>
+			<script src="../static/js/jquery.dropotron.min.js"></script>
+			<script src="../static/js/jquery.scrolly.min.js"></script>
+			<script src="../static/js/jquery.scrollex.min.js"></script>
+			<script src="../static/js/browser.min.js"></script>
+			<script src="../static/js/breakpoints.min.js"></script>
+			<script src="../static/js/util.js"></script>
+			<script src="../static/js/main.js"></script>
+
+	</body>
+</html>

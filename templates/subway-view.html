@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Seoul City Subway</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../static/css/main.css" />
+		<noscript><link rel="stylesheet" href="../static/css/noscript.css" /></noscript>
+	</head>
+	<body class="left-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a id="logo">노선 실시간 이미지</a></h1>
+							</header>
+						</div>
+
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="/">메인</a></li>
+							<li><a href="#">노선 이미지</a></li>
+							<li><a href="http://127.0.0.1:5000/route/realtime">실시간 지하철 위치</a></li>
+							<li><a href="http://127.0.0.1:5000/subway/arrive">지하철 도착 정보</a></li>
+						</ul>
+					</nav>
+
+				</div>
+
+			<!-- Main -->
+				<div class="wrapper style1">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-12 col-12-mobile imp-mobile" id="content">
+								<article id="main">
+									<iframe width="100%" height="1000" style="border: 3px solid black;" src="https://smss.seoulmetro.co.kr/traininfo/traininfoUserView.do" 
+									name="test" id="test" frameborder="1" scrolling="yes">이 브라우저는 iframe을 지원하지 않습니다</iframe>
+
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+
+		<!-- Scripts -->
+			<script src="../static/js/jquery.min.js"></script>
+			<script src="../static/js/jquery.dropotron.min.js"></script>
+			<script src="../static/js/jquery.scrolly.min.js"></script>
+			<script src="../static/js/jquery.scrollex.min.js"></script>
+			<script src="../static/js/browser.min.js"></script>
+			<script src="../static/js/breakpoints.min.js"></script>
+			<script src="../static/js/util.js"></script>
+			<script src="../static/js/main.js"></script>
+
+	</body>
+</html>
